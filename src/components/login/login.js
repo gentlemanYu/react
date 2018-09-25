@@ -22,7 +22,7 @@ class Login extends Component {
 	}
 	login =()=> {
 		localStorage.setItem("language", this.state.language)
-		this.props.history.push('/Base')
+		this.props.history.push('/Base/list')
 	}
 	render() {
 		let { language } = this.state

@@ -70,6 +70,7 @@ class App extends Component {
     console.log(menuData)
     return (
       // 设置 antd 语言
+      // 这里可以通过判断token  来控制component  做简单的路由拦截
       <LocaleProvider locale={currentLocale}>  
         <Router >
             <Switch>

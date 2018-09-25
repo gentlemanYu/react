@@ -28,7 +28,7 @@ class EditeContent extends Component {
 			pice:'',
 		})
 	} 
-	// edite modal
+	// 弹出框
 	showEditeModal = (r,t,index) => {
 		let curuntValue = {...r}
     this.setState({
@@ -36,7 +36,7 @@ class EditeContent extends Component {
 			editeModalValue:curuntValue
 		});
   }
-
+	//  add 按钮
   editeHandleOk = (e) => {
 		let { editeModalValue } = this.state
 		if(editeModalValue.pice === '' || editeModalValue.name === '') {
@@ -47,12 +47,13 @@ class EditeContent extends Component {
 		});
 		this.props.changeEditeValueCallback(editeModalValue)
   }
-
+	// 隐藏弹出框
   editeHandleCancel = (e) => {
     this.setState({
       editeVisible: false,
     });
 	}
+	// 改变弹出框 数据
 	changeEditeValue=(v,type)=>{
 		let { editeModalValue } = this.state
 		editeModalValue[type] = v
@@ -61,6 +62,7 @@ class EditeContent extends Component {
 			editeModalValue:editeModalValue
 		})
 	}
+	// 删除弹窗里面的数据 
 	editeRemove=()=> {
 		let { editeModalValue } = this.state
 		this.props.editeRemoveCallback(editeModalValue)
