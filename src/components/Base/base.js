@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout, Menu, Breadcrumb, Button  } from 'antd';
+import { Layout, Menu, Breadcrumb  } from 'antd';
 import { Route, Switch, NavLink } from "react-router-dom";
 import { getMenuListData } from '../../routeslist'
 import './base.less'
@@ -62,7 +62,7 @@ export default class Base extends Component {
 					<Sider width={200} style={{ background: '#fff' }}>
 						<Menu
 							mode="inline"
-							defaultSelectedKeys={['1']}
+							defaultSelectedKeys={['0']}
 							defaultOpenKeys={['sub1']}
 							style={{ height: '100%', borderRight: 0 }}
 						>
